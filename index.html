@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100d2c">
+    <meta name="description" content="Enter Dreamscape, a magical interactive universe where you can release your wishes into the stars.">
+
+    <title>Dreamscape — Where Dreams Come Alive</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Loading screen -->
+    <div class="loader" id="loader">
+        <div class="loader-orbit">
+            <span>☾</span>
+        </div>
+        <p>ENTERING DREAMSCAPE</p>
+        <div class="loader-track">
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <main class="dreamscape" id="dreamscape">
+
+        <!-- Atmospheric background -->
+        <div class="sky-glow"></div>
+        <div class="stars" id="stars" aria-hidden="true"></div>
+        <div class="magic-particles" id="magicParticles" aria-hidden="true"></div>
+
+        <div class="shooting-star shooting-one" aria-hidden="true"></div>
+        <div class="shooting-star shooting-two" aria-hidden="true"></div>
+
+        <!-- Navigation -->
+        <header class="navbar">
+            <a href="#home" class="logo" aria-label="Dreamscape home">
+                Dreamscape<span>✳</span>
+            </a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#worlds">Explore</a>
+                <a href="#about">Our universe</a>
+
+                <button
+                    class="theme-toggle"
+                    id="themeToggle"
+                    aria-label="Switch to day mode"
+                    aria-pressed="false"
+                    title="Change the sky"
+                >☀</button>
+            </nav>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="mobileNav"
+            >
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <!-- Mobile navigation -->
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+            <a href="#home">Home <span>↗</span></a>
+            <a href="#worlds">Explore <span>↗</span></a>
+            <a href="#about">Our universe <span>↗</span></a>
+            <a href="#make-a-wish">Make a wish <span>↗</span></a>
+        </nav>
+
+        <!-- ORIGINAL HERO -->
+        <section class="hero" id="home">
+
+            <div class="moon" aria-hidden="true">
+                <span class="crater crater-one"></span>
+                <span class="crater crater-two"></span>
+                <span class="crater crater-three"></span>
+            </div>
+
+            <div class="cloud cloud-one" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div class="cloud cloud-two" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div class="cloud cloud-three" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-sparkle">✦</span>
+                    YOUR LITTLE ESCAPE FROM REALITY
+                </div>
+
+                <h1>
+                    Somewhere<br>
+                    between <span>dreams.</span>
+                </h1>
+
+                <p class="hero-description">
+                    A little world where the stars whisper,
+                    the clouds wander, and imagination has
+                    absolutely no limits.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#worlds" class="hero-button">
+                        Explore the universe <span>↗</span>
+                    </a>
+
+                    <a href="#make-a-wish" class="hero-secondary">
+                        <span class="play-icon">✧</span>
+                        Send a wish into the sky
+                    </a>
+                </div>
+
+                <div class="hero-bottom">
+                    <span class="hero-bottom-line"></span>
+                    KEEP YOUR HEAD IN THE CLOUDS
+                    <span class="hero-bottom-line"></span>
+                </div>
+            </div>
+
+            <div class="hero-side-note note-left">
+                somewhere, something<br>beautiful is waiting ✧
+            </div>
+
+            <div class="hero-side-note note-right">
+                stay a little<br>dreamy ♡
+            </div>
+
+            <a href="#worlds" class="scroll-indicator" aria-label="Scroll to explore">
+                <span></span>
+            </a>
+        </section>
+
+        <!-- INTRODUCTION -->
+        <!-- <section class="intro section reveal" id="about">
+            <div class="section-eyebrow">✧ A WORLD OF YOUR OWN ✧</div>
+
+            <h2>
+                Reality can wait.<br>
+                <span class="gradient-text">Stay awhile.</span>
+            </h2>
+
+            <p class="section-copy">
+                Somewhere beyond the everyday, there is a place for
+                the thoughts you keep to yourself, the dreams you
+                haven't told anyone, and the wishes you hope will
+                find their way home.
+            </p>
+
+            <div class="intro-decoration" aria-hidden="true">
+                <span>✦</span>
+                <span>✧</span>
+                <span>☾</span>
+                <span>✧</span>
+                <span>✦</span>
+            </div>
+        </section> -->
+
+        
+        <!-- <section class="worlds section" id="worlds">
+            <div class="section-eyebrow reveal">✧ PICK YOUR LITTLE UNIVERSE ✧</div>
+
+            <h2 class="reveal">
+                Every world holds<br>
+                <span class="gradient-text">a different kind of magic.</span>
+            </h2>
+
+            <p class="section-copy reveal">
+                Follow a star, wander through a cloud, or get lost
+                somewhere your imagination feels at home.
+            </p>
+
+            <div class="world-grid">
+
+                <article class="world-card world-lavender reveal">
+                    <div class="world-illustration moon-art" aria-hidden="true">
+                        <span class="big-moon">☾</span>
+                        <span class="art-star star-a">✦</span>
+                        <span class="art-star star-b">✧</span>
+                        <span class="art-star star-c">·</span>
+                    </div>
+
+                    <span class="world-number">WORLD 01</span>
+                    <h3>The Moon Garden</h3>
+                    <p>
+                        For the quiet dreamers, late-night thinkers,
+                        and people who find magic in the little things.
+                    </p>
+
+                    <a href="#make-a-wish" class="world-link">
+                        Leave a little wish <span>↗</span>
+                    </a>
+                </article>
+
+                <article class="world-card world-pink reveal">
+                    <div class="world-illustration cloud-art" aria-hidden="true">
+                        <span class="big-cloud">☁</span>
+                        <span class="art-star star-a">✧</span>
+                        <span class="art-star star-b">♡</span>
+                        <span class="art-star star-c">✦</span>
+                    </div>
+
+                    <span class="world-number">WORLD 02</span>
+                    <h3>The Cloud Kingdom</h3>
+                    <p>
+                        For hopeless romantics, big imaginations,
+                        and anyone who believes in beautiful what-ifs.
+                    </p>
+
+                    <a href="#make-a-wish" class="world-link">
+                        Leave a little wish <span>↗</span>
+                    </a>
+                </article>
+
+                <article class="world-card world-blue reveal">
+                    <div class="world-illustration star-art" aria-hidden="true">
+                        <span class="big-star">✧</span>
+                        <span class="art-star star-a">✦</span>
+                        <span class="art-star star-b">·</span>
+                        <span class="art-star star-c">✧</span>
+                    </div>
+
+                    <span class="world-number">WORLD 03</span>
+                    <h3>The Starlight Sea</h3>
+                    <p>
+                        For brave hearts, fresh beginnings,
+                        and dreams that feel bigger than the sky.
+                    </p>
+
+                    <a href="#make-a-wish" class="world-link">
+                        Leave a little wish <span>↗</span>
+                    </a>
+                </article>
+
+            </div>
+        </section> -->
+
+        <!-- MAKE A WISH -->
+        <section class="wish-section section" id="make-a-wish">
+
+            <div class="wish-decoration wish-decoration-one" aria-hidden="true">✧</div>
+            <div class="wish-decoration wish-decoration-two" aria-hidden="true">✦</div>
+
+            <div class="section-eyebrow reveal">✧ YOUR MOMENT WITH THE UNIVERSE ✧</div>
+
+            <h2 class="reveal">
+                If you could wish for<br>
+                <span class="gradient-text">anything at all...</span>
+            </h2>
+
+            <p class="section-copy reveal">
+                What would your heart ask for? Write it down.
+                Take a breath. Then release your wish into the stars.
+            </p>
+
+            <form class="wish-card reveal" id="wishForm">
+                <div class="wish-card-heading">
+                    <span class="wish-label"><span>✦</span> A SECRET WISH</span>
+                    <span class="character-count" id="charCount">0 / 180</span>
+                </div>
+
+                <label for="wishInput" class="sr-only">Write your wish</label>
+
+                <textarea
+                    id="wishInput"
+                    maxlength="180"
+                    placeholder="I wish that one day..."
+                    required
+                ></textarea>
+
+                <div class="wish-card-footer">
+                    <span class="wish-hint">♡ There is no wrong thing to wish for.</span>
+
+                    <button class="release-button" type="submit">
+                        Release my wish <span>✦</span>
+                    </button>
+                </div>
+            </form>
+
+            <p class="privacy-note reveal">
+                <span>✧</span> Your wish isn't saved or shared. It belongs to this moment.
+            </p>
+
+            <div class="wish-message" id="wishMessage" role="status" aria-live="polite"></div>
+
+            <div class="wish-afterthought reveal">
+                <span>☾</span>
+                <p>
+                    Some wishes become plans.<br>
+                    Some become memories.<br>
+                    And some simply remind us what matters.
+                </p>
+            </div>
+        </section>
+
+        <!-- HOW THE MAGIC WORKS -->
+        <section class="magic-section section">
+            <div class="section-eyebrow reveal">✧ THREE LITTLE MOMENTS ✧</div>
+
+            <h2 class="reveal">
+                A little wish.<br>
+                <span class="gradient-text">A little more hope.</span>
+            </h2>
+
+            <div class="steps-grid">
+
+                <article class="step-card reveal">
+                    <div class="step-icon">☾</div>
+                    <span class="step-number">01 / IMAGINE</span>
+                    <h3>Dream freely</h3>
+                    <p>
+                        Give your imagination room to wander.
+                        You don't have to know how everything will happen.
+                    </p>
+                </article>
+
+                <article class="step-card reveal">
+                    <div class="step-icon">✎</div>
+                    <span class="step-number">02 / PUT IT INTO WORDS</span>
+                    <h3>Write from the heart</h3>
+                    <p>
+                        Name the little or enormous thing you've been
+                        hoping for. Let it exist outside your thoughts.
+                    </p>
+                </article>
+
+                <article class="step-card reveal">
+                    <div class="step-icon">✦</div>
+                    <span class="step-number">03 / LET IT FLY</span>
+                    <h3>Release your star</h3>
+                    <p>
+                        Watch your wish become a glowing star,
+                        leaving a little trail of magic behind.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- WISH WALL -->
+        <section class="wish-wall section" id="wish-wall">
+            <div class="section-eyebrow reveal">✧ LITTLE NOTES FROM THE UNIVERSE ✧</div>
+
+            <h2 class="reveal">
+                Maybe this is<br>
+                <span class="gradient-text">the sign you needed.</span>
+            </h2>
+
+            <p class="section-copy reveal">
+                A few gentle reminders for the days when your dreams
+                feel a little too far away.
+            </p>
+
+            <div class="quote-grid">
+
+                <article class="quote-card reveal">
+                    <span class="quote-symbol">✦</span>
+                    <p>
+                        "You are allowed to become someone
+                        you haven't even imagined yet."
+                    </p>
+                    <span class="quote-caption">ROOM TO GROW</span>
+                </article>
+
+                <article class="quote-card reveal">
+                    <span class="quote-symbol">☾</span>
+                    <p>
+                        "Your timeline doesn't need to look
+                        like anybody else's."
+                    </p>
+                    <span class="quote-caption">TAKE YOUR TIME</span>
+                </article>
+
+                <article class="quote-card reveal">
+                    <span class="quote-symbol">✧</span>
+                    <p>
+                        "There are beautiful things ahead
+                        that you cannot see just yet."
+                    </p>
+                    <span class="quote-caption">KEEP GOING</span>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="final-section section">
+            <div class="final-star reveal" aria-hidden="true">✧</div>
+
+            <div class="section-eyebrow reveal">BEFORE YOU RETURN TO REALITY</div>
+
+            <h2 class="reveal">
+                Keep a little<br>
+                <span class="gradient-text">magic with you.</span>
+            </h2>
+
+            <p class="section-copy reveal">
+                The universe is a lovely place to dream.
+                The real magic begins when you carry a little of that
+                hope back into your everyday life.
+            </p>
+
+            <a href="#make-a-wish" class="hero-button reveal">
+                Make one more wish <span>↗</span>
+            </a>
+        </section>
+
+        <footer class="footer">
+            <a href="#home" class="logo footer-logo">
+                Dreamscape<span>✳</span>
+            </a>
+
+            <p>made of stardust, soft hopes & imagination.</p>
+
+            <a href="#home" class="back-to-top">
+                BACK TO THE STARS ↑
+            </a>
+
+            <span class="footer-copyright">
+                © <span id="year"></span> DREAMSCAPE
+            </span>
+        </footer>
+
+    </main>
+</body>
+</html>
